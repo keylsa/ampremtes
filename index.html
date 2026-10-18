@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Verifikasi email & aktifkan Alight Motion Premium dengan cepat, aman, dan otomatis." />
+<meta name="theme-color" content="#0a0a0f" />
+<title>👑 Rimuru MD — Alight Motion Premium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="brand-crown">👑</span>
+    <span class="brand-text">RIMURU MD</span>
+  </div>
+  <div class="badge-premium">Premium</div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Alight Motion<br />Premium Access</h1>
+    <p>Verifikasi email & aktifkan premium dalam dua langkah mudah. Cepat, aman, dan otomatis.</p>
+  </section>
+
+  <div class="card">
+    <div class="stepper" id="stepper">
+      <div class="step active" data-step="1">
+        <div class="step-num">1</div>
+        <div class="step-label">Kirim Link</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" data-step="2">
+        <div class="step-num">2</div>
+        <div class="step-label">Verifikasi</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" data-step="3">
+        <div class="step-num">3</div>
+        <div class="step-label">Selesai</div>
+      </div>
+    </div>
+
+    <div class="panel active" id="panel-1">
+      <div class="field">
+        <label>Email Address <span>*</span></label>
+        <div class="input-wrap">
+          <span class="input-icon">📧</span>
+          <input type="email" id="email" placeholder="user@example.com" autocomplete="email" />
+        </div>
+      </div>
+      <button class="btn btn-primary" id="btn-send">
+        <span>Kirim Link Verifikasi</span>
+      </button>
+      <div class="notice" id="notice-1"></div>
+      <div class="tips">
+        <h4>💡 Cara Kerja</h4>
+        <ol>
+          <li>Masukkan email aktif kamu</li>
+          <li>Klik <b>Kirim Link Verifikasi</b></li>
+          <li>Cek inbox / spam dari <code>noreply</code></li>
+          <li>Salin link verifikasi, lanjut ke langkah 2</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-2">
+      <div class="field">
+        <label>Email Address</label>
+        <div class="input-wrap">
+          <span class="input-icon">📧</span>
+          <input type="email" id="email-2" readonly />
+        </div>
+      </div>
+      <div class="field">
+        <label>Link Verifikasi <span>*</span></label>
+        <div class="input-wrap">
+          <span class="input-icon">🔗</span>
+          <input type="text" id="link" placeholder="https://alight-creative.firebaseapp.com/..." />
+        </div>
+      </div>
+      <button class="btn btn-primary" id="btn-verify">
+        <span>Verifikasi & Aktifkan Premium</span>
+      </button>
+      <button class="btn btn-ghost" id="btn-back">← Kembali</button>
+      <div class="notice" id="notice-2"></div>
+      <div class="tips">
+        <h4>⚠️ Penting</h4>
+        <ol>
+          <li>Kirim <b>full URL</b> dari email (diawali <code>http://</code> atau <code>https://</code>)</li>
+          <li>Link hanya berlaku <b>sekali pakai</b></li>
+          <li>Jika link expired, kembali ke langkah 1 untuk kirim ulang</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-3">
+      <div class="result-card">
+        <div class="result-icon">✅</div>
+        <h2>Premium Aktif!</h2>
+        <p id="success-msg">Akun kamu berhasil diverifikasi dan premium sudah diproses.</p>
+      </div>
+      <button class="btn btn-ghost" id="btn-restart" style="margin-top: 24px;">
+        Proses Email Lain
+      </button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © <strong>RIMURU MD</strong> 〽️ — Powered by Anita Studio API
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
